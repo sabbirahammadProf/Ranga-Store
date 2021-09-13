@@ -5,40 +5,34 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ranga Store</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
-  <!-- google Montserrat  font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <title>Shopliance</title>
+  <!-- Tailwind CSS -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
+  <main>
+    <div>
+      <div class="w-2/6 mx-auto" >
+        <input id="input-field" class="rounded py-2 w-9/12 px-2 border-2" type="text" />
+        <button type="button" class="bg-blue-500 rounded py-2 px-4 text-white my-6" autocomplete="off" id="search-btn" onclick="loadProducts()">
+          Search  
         </button>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
+      <div class="p-2 col-10">
+        <div id="all-products" class="grid grid-cols-3 gap-6">
         </div>
       </div>
-      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
-          <table class="table">
+      <div class="col-2 fixed right-0 left-auto mt-40 shadow-xl bg-purple-600 rounded p-5">
+        <div class="text-left" id="my-cart">
+          <table class="text-white">
             <thead>
-              <h1>My-Cart</h1>
+              <h1 class="text-white text-2xl font-extrabold">My-Cart</h1>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -49,7 +43,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td><span id="total-Products">0</span></td>
+                <td><span id="total-Products" class="ml-3">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -71,15 +65,15 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
-                <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
+              <tr class="border-t">
+                <th>Total</th>
+                <td>$ <span id="total">0</span></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
-          <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+          <div class="text-center">
+            <button class="bg-white w-full rounded py-2 mt-4">Buy Now</button>
           </div>
         </div>
       </div>
